@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list</title>
+    <link rel="stylesheet" href="src/style/style.css">
+    
+    <script src="./script.js" defer></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="src/img/favicon.jpeg">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Google fonts -->
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- Font awesome -->
+
+</head>
+
+
+<body>
+    
+
+    <main class="main">
+        
+        <div class="main__list">
+            <div class="header__date">
+        </div>
+            <h4 class="main__list-title">Todo list:</h4>
+            <h5>Total: <span class="main__list-total"></span></h5>
+            <ul class="main__tasks-list">
+            </ul>
+        </div>
+
+        <form class="main__form" action="">
+            <input class="main__add-input" type="text" placeholder="Enter your task">
+            <span class="main__error-msg"></span>
+            <button type="submit">Add</button>
+            <button class="delBtn" type="button">Delete All <img src="src/img/bin.png" width="12px"></button>
+        </form>
+
+    </main>
+
+    <!-- Footer -->
+
+    <div class="footer-main">
+        <nav class="menu">
+            <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
+            <label class="menu-open-button" for="menu-open">
+                <span class="hamburger hamburger-1"></span>
+                <span class="hamburger hamburger-2"></span>
+                <span class="hamburger hamburger-3"></span>
+            </label>
+            
+        </nav>
+        <!-- filters -->
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <defs>
+                <filter id="shadowed-goo">
+                    <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 18 -7"
+                        result="goo" />
+                    <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+                    <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 -0.2"
+                        result="shadow" />
+                    <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+                    <feComposite in2="shadow" in="goo" result="goo" />
+                    <feComposite in2="goo" in="SourceGraphic" result="mix" />
+                </filter>
+                <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 18 -7"
+                        result="goo" />
+                    <feComposite in2="goo" in="SourceGraphic" result="mix" />
+                </filter>
+            </defs>
+        </svg>
+
+    </div>
+
+</body>
+
+</html>
